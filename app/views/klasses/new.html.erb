@@ -1,0 +1,33 @@
+<%= form_for @klass do | f | %>
+	<div class = “form-group”>
+		
+		<div class="form-group">
+              <%= f.label :name %>
+              <%= f.text_field :name, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :teacher %>
+              <%= f.text_field :teacher, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :start %>
+              <%= f.text_field :start, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :duration %>
+              <%= f.text_field :duration, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+            	<%= f.label :day %>
+				<%= f.select :day, ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'] %>
+			</div>
+            
+            <%= f.submit 'Submit', class: 'btn btn-default' %>
+ 
+	</div>
+	
+<% end %>
