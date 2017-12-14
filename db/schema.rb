@@ -13,9 +13,11 @@
 ActiveRecord::Schema.define(version: 20171213222507) do
 
   create_table "klasses", force: :cascade do |t|
-    t.string "name"
-    t.string "teacher"
-    t.string "day"
+    t.string  "name"
+    t.string  "teacher"
+    t.string  "day"
+    t.integer "start"
+    t.integer "duration"
   end
 
 end
