@@ -12,8 +12,11 @@
             </div>
             
             <div class="form-group">
-              <%= f.label :start %>
-              <%= f.text_field :start, class: 'form-control' %>
+              <%= f.label :start_hour %>
+              <%= f.select :start_hour, 6 .. 22, class: 'form-control' %>
+              
+              <%= f.label :start_mins %>
+              <%= f.select :start_mins, 0 .. 55, class: 'form-control' %>
             </div>
             
             <div class="form-group">
