@@ -17,7 +17,9 @@
   @import "bootstrap-sprockets";
   @import "bootstrap";
   
-  .navbar {
+  .navbar,
+  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
+  {
     // gradient from uiGradients by _ighosh
     background: #52c234;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #061700, #52c234);  /* Chrome 10-25, Safari 5.1-6 */
@@ -26,12 +28,26 @@
     border: none;
   }
   
-  .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+  .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a,
+  .dropdown-item 
+  {
     color :white;
     
     &:hover {
       color: white;
       opacity: 0.75;
+    }
+  }
+  
+  .dropdown-item, .dropdown-menu {
+    background: #52c234;
+    color: white;
+    border-top: none;
+  
+    &:hover {
+      color: white;
+      opacity: 0.75;
+      visibility: visible;
     }
   }
  
