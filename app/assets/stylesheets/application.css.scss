@@ -47,9 +47,13 @@
     &:hover {
       color: white;
       opacity: 0.75;
-      visibility: visible;
     }
   }
+  
+  .dropdown:hover .dropdown-menu{
+    display: block;
+  }
+
  
 .home-callout {
     
