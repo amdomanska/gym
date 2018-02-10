@@ -2,13 +2,13 @@ class KlassesController < ApplicationController
 	before_action :fix_params, only: [:create, :update]
 	
 	def index
-	  @klasses_mon = Klass.order(:start).where(day: 'MON').find_each
-	  @klasses_tue = Klass.order(:start).where(day: 'TUE').find_each
-	  @klasses_wed = Klass.order(:start).where(day: 'WED').find_each
-	  @klasses_thu = Klass.order(:start).where(day: 'THU').find_each
-	  @klasses_fri = Klass.order(:start).where(day: 'FRI').find_each
-	  @klasses_sat = Klass.order(:start).where(day: 'SAT').find_each
-	  @klasses_sun = Klass.order(:start).where(day: 'SUN').find_each
+	  @klasses_mon = Klass.order(:start).where(day: 'MON')
+	  @klasses_tue = Klass.order(:start).where(day: 'TUE')
+	  @klasses_wed = Klass.order(:start).where(day: 'WED')
+	  @klasses_thu = Klass.order(:start).where(day: 'THU')
+	  @klasses_fri = Klass.order(:start).where(day: 'FRI')
+	  @klasses_sat = Klass.order(:start).where(day: 'SAT')
+	  @klasses_sun = Klass.order(:start).where(day: 'SUN')
 	  
 	end
 	

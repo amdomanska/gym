@@ -1,7 +1,31 @@
-<p><%= @klasses_mon.inspect %></p>
-<p><%= @klasses_tue.inspect %></p>
-<p><%= @klasses_wed.inspect %></p>
-<p><%= @klasses_thu.inspect %></p>
-<p><%= @klasses_fri.inspect %></p>
-<p><%= @klasses_sat.inspect %></p>
-<p><%= @klasses_sun.inspect %></p>
+<div class='container well'>
+  <div class='container'>
+    
+    <table></table>
+      <tr>
+        <div class='row'>
+          <div class='col-md-1'>
+            <th>
+              <div class='timetable_field_day text-center'>
+                MONDAY:
+              </div>
+            </th>
+            
+            
+          </div>
+          <% @klasses_mon.each do |k| %>
+            <div class='col-md-1'>
+              <div class='timetable_field_klass text-center'>
+                <b><%= k.name.upcase %></b><br>
+                <%= k.teacher %><br>
+                START:<br><%= k.start/60 %>:<%= k.start%60 %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </tr>
+    </table>
+
+  </div>
+</div>
+    
